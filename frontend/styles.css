@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Poppins:ital,wght@0,100;1,100&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(44, 43, 43);
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    /* border: 1px solid white; */
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px 3px rgb(51, 110, 115);
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("movie-background.jpg")no-repeat center center/cover;
+    border-radius: 10%;
+    opacity: .6;
+    z-index: -1;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,black);
+    border-radius: 10%;
+    opacity: .6;
+    object-fit: cover;
+}
+
+header video{
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    margin-top: -20%;
+    z-index: -1;
+    
+    /* margin-bottom: -25%; */
+    /* margin-left: -10%; */
+    /* margin-top: -7%; */
+}
+
+header nav{
+    width: 100%;
+    height: 10%;
+    /* border: 1px solid white; */
+    display: flex;
+    /* position: relative; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav img {
+    margin-left: 8%;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* color: white; */
+    list-style: none;
+    padding: 10px;
+    
+}
+
+header nav ul li{
+    padding: 10px;
+    color: white;
+    white-space: nowrap;
+}
+
+header nav .logo-ul ul li a{
+    color: white;
+    text-decoration: none;
+    transition: font-size .2s;
+}
+
+header nav ul li a:hover{
+    color: aqua;
+    font-size: 30px;
+}
+
+header nav .search-user{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .search-user input{
+    margin-right: 50%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: rgb(164, 162, 162);
+    padding: 5px;
+}
+
+header nav .search-user input::placeholder{
+    color:white;
+    padding: 5px;
+}
+
+header nav .search-user .search{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    width: 320px;
+    height:300px;
+    /* border: 1px solid white; */
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+header nav .search-user .search .card{
+    width:100%;
+    height: 20%;
+    /* border: 1px solid red; */
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 1px 0px;
+}
+
+header nav .search-user .search .card::before{
+    content: '';
+    position: absolute;
+    background:white;
+    opacity: .1;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    position: absolute;
+}
+
+header nav .search-user .search .card img{
+    border-radius: 2px;
+    width: 28px;
+    height: 80%;
+    margin-left: 8px;
+}
+
+header nav .search-user .search .card .cont{
+    font-family: 'Lato', sans-serif;
+    padding:5px;
+    color:rgb(255, 255, 255);
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+header nav .search-user .search .card .cont h3{
+    font-family: 'Lato', sans-serif;
+    font-weight:900;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+header nav .search-user .search .card .cont p span{
+    background-color: yellow;
+    font-size: 5x;
+    padding: 0px 6px;
+    color: black;
+}
+
+.content{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    /* margin-left: 5%; */
+
+}
+
+.content h2{
+    color: rgb(57, 157, 203);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    margin-left: 5%;
+    /* margin-top: 5%; */
+    font-weight: bolder;
+}
+
+.content p{
+    color: rgb(181, 221, 219);
+    font-size: 15px;
+    margin-left: 5%;
+    width: 350px;
+    font-weight: bold;
+    padding: 5px;
+    /* word-break: break-all; */
+}
+
+.content h3{
+    padding: 5px;
+    margin-left: 5%;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+.content .imdb {
+    font-size: 25px;
+    color: yellow;
+}
+
+.content #btn {
+    margin-left: 5%;
+    width:50px;
+    padding: 3px;
+    white-space: nowrap;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    /* background: navajowhite; */
+    background: linear-gradient(90deg,rgb(0, 174, 255),rgb(37, 178, 168));
+    border-radius: 10px;
+    animation: button 1s linear infinite;
+    /* transition:width 2s ; */
+}
+
+/* .content #btn:hover{
+    width: 100px;
+} */
+
+@keyframes button{
+    0%{background: linear-gradient(0deg,rgb(0, 153, 255),rgb(37,178,168))};
+    20%{background: linear-gradient(0deg,rgb(0,174,255),rgb(37,178,168))};
+    40%{background: linear-gradient(0deg,rgb(0,174,255),rgb(37,178,168))};
+    60%{background: linear-gradient(0deg,rgb(0,174,255),rgb(37,178,168))};
+    80%{background: linear-gradient(0deg,rgb(0,174,255),rgb(37,178,168))};
+    100%{background: linear-gradient(0deg,rgb(0,174,255),rgb(37,178,168))};
+}
+
+header section {
+    position: absolute;
+    margin-left: 5%;
+    width: 100%;
+    height: 180px;
+    /* padding: 0px 50px; */
+    /* margin-top: -10px; */
+    bottom: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size:20px;
+    /* border: 1px solid white; */
+}
+
+header section .cards{
+    position: relative;
+    width: 90%;
+    height: 180px;
+    /* border: 1px solid white; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    z-index: 9999;
+}
+
+header section .cards .card{
+    position: relative;
+    margin: 0px 5px;
+    border-radius: 5px;
+    min-width: 20%;
+    height: 95%;
+    /* border: 1px solid white; */
+    background:grey;
+}
+
+header section .cards .card img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: width 1s;
+}
+
+header section .cards .card img:hover{
+    width: 115%;
+}
